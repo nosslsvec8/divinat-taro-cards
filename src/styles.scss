@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --space: 13px 33px;
+}
+
+* {
+  //font-size: 13px;
+}
+
+main {
+  padding: var(--space);
+  margin-top: 40px;
+}
+
+.cards_preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+
+  & > div {
+    display: flex;
+    padding: 10px 15px;
+  }
+
+  & .empty{
+    padding: 0;
+    margin: 0;
+  }
+}

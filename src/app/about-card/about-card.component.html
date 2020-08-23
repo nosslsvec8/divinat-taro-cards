@@ -1,0 +1,8 @@
+<main>
+  <h2>{{nameCard}}</h2>
+  <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
+
+  <p>
+    {{card | json}}
+  </p>
+</main>

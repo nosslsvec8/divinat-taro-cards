@@ -1,0 +1,56 @@
+<main>
+  <h2>ЗНАЧЕНИЕ И ТОЛКОВАНИЕ СТАРШИХ АРКАНОВ</h2>
+  <div class="cards_preview">
+    <div *ngFor="let card of cards.cards" [ngClass]="{empty: card.type != 'senior-arcans'}">
+      <div *ngIf="card.type == 'senior-arcans'" class="card_item">
+        <a [href]="'/card/'+card.id">
+          <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <h2>МЛАДШИЕ АРКАНЫ: ЖЕЗЛЫ</h2>
+  <div class="cards_preview">
+    <div *ngFor="let card of cards.cards" [ngClass]="{empty: card.type != 'wands'}">
+      <div *ngIf="card.type == 'wands'" class="card_item">
+        <a [href]="'/card/'+card.id">
+          <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <h2>МЛАДШИЕ АРКАНЫ: КУБКИ</h2>
+  <div class="cards_preview">
+    <div *ngFor="let card of cards.cards" [ngClass]="{empty: card.type != 'cups'}">
+      <div *ngIf="card.type == 'cups'" class="card_item">
+        <a [href]="'/card/'+card.id">
+          <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <h2>МЛАДШИЕ АРКАНЫ: МЕЧИ</h2>
+  <div class="cards_preview">
+    <div *ngFor="let card of cards.cards" [ngClass]="{empty: card.type != 'sword'}">
+      <div *ngIf="card.type == 'sword'" class="card_item">
+        <a [href]="'/card/'+card.id">
+          <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <h2>МЛАДШИЕ АРКАНЫ: ПЕНТАКЛИ</h2>
+  <div class="cards_preview">
+    <div *ngFor="let card of cards.cards" [ngClass]="{empty: card.type != 'pentacles'}">
+      <div *ngIf="card.type == 'pentacles'" class="card_item">
+        <a [href]="'/card/'+card.id">
+          <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
