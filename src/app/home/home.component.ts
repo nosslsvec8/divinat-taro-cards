@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Cards} from 'src/app/Cards';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   cards = new Cards();
+
+  constructor(private title: Title) {}
+
+  ngOnInit() {
+    this.title.setTitle('Карты таро');
+  }
 }
