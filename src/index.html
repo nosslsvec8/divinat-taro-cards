@@ -9,5 +9,26 @@
 </head>
 <body>
   <app-root></app-root>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+	     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+	<script>
+	  // Your web app's Firebase configuration
+	  var firebaseConfig = {
+	    apiKey: "AIzaSyDF1ipRQdjnBZNlch85DtcJjYvH86kueuw",
+	    authDomain: "taro-cards.firebaseapp.com",
+	    databaseURL: "https://taro-cards.firebaseio.com",
+	    projectId: "taro-cards",
+	    storageBucket: "taro-cards.appspot.com",
+	    messagingSenderId: "628264484376",
+	    appId: "1:628264484376:web:ed522324943924dbc48d6d"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	</script>
 </body>
 </html>
