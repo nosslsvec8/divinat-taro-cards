@@ -1,8 +1,59 @@
 <main>
-  <h2>{{nameCard}}</h2>
-  <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
 
-  <p>
-    {{card | json}}
-  </p>
+  <div class="preview">
+    <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
+    <div class="preview_title">
+      <h2>{{nameCard}}:</h2>
+      <p>{{card.prelude}}</p>
+      <br>
+      <h3>Навигация:</h3>
+      <div class="preview_nav">
+        <a [href]="pathname + '#yes_no'" *ngIf="card.yesNo != '' && card.yesNo">ДА - НЕТ</a>
+        <a [href]="pathname + '#future'">НА БУДУЩЕЕ</a>
+        <a [href]="pathname + '#situation'">НА СИТУАЦИЯ</a>
+        <a [href]="pathname + '#relations'">НА ОТНОШЕНИЯ</a>
+        <a [href]="pathname + '#think'">ЧТО ОН ДУМАЕТ ОБО МНЕ</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="preview" *ngIf="card.yesNo != '' && card.yesNo">
+    <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
+    <div class="preview_title">
+      <h2 id="yes_no">ДА - НЕТ:</h2>
+      <p *ngFor="let text of card.yesNo">{{text}}</p>
+    </div>
+  </div>
+
+  <div class="preview">
+    <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
+    <div class="preview_title">
+      <h2 id="future">НА БУДУЩЕЕ:</h2>
+      <p *ngFor="let text of card.future">{{text}}</p>
+    </div>
+  </div>
+
+  <div class="preview">
+    <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
+    <div class="preview_title">
+      <h2 id="situation">НА СИТУАЦИЯ:</h2>
+      <p *ngFor="let text of card.future">{{text}}</p>
+    </div>
+  </div>
+
+  <div class="preview">
+    <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
+    <div class="preview_title">
+      <h2 id="relations">НА ОТНОШЕНИЯ:</h2>
+      <p *ngFor="let text of card.relations">{{text}}</p>
+    </div>
+  </div>
+
+  <div class="preview">
+    <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
+    <div class="preview_title">
+      <h2 id="think">ЧТО ОН ДУМАЕТ ОБО МНЕ:</h2>
+      <p *ngFor="let text of card.think">{{text}}</p>
+    </div>
+  </div>
 </main>
