@@ -1,5 +1,4 @@
 <main>
-
   <div class="preview">
     <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
     <div class="preview_title">
@@ -17,43 +16,38 @@
     </div>
   </div>
 
-  <div class="preview" *ngIf="card.yesNo != '' && card.yesNo">
-    <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
-    <div class="preview_title">
-      <h2 id="yes_no">ДА - НЕТ:</h2>
-      <p *ngFor="let text of card.yesNo">{{text}}</p>
-    </div>
-  </div>
+  <app-block-info-card
+    [card] = card
+    [idHtml] ="{value: 'yes_no'}"
+    [titleContext] = "{value: 'yesNo'}"
+    [h2Text]="{value: 'ДА - НЕТ:'}"
+  ></app-block-info-card>
 
-  <div class="preview">
-    <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
-    <div class="preview_title">
-      <h2 id="future">НА БУДУЩЕЕ:</h2>
-      <p *ngFor="let text of card.future">{{text}}</p>
-    </div>
-  </div>
+  <app-block-info-card
+    [card] = card
+    [idHtml] ="{value: 'future'}"
+    [titleContext] = "{value: 'future'}"
+    [h2Text]="{value: 'НА БУДУЩЕЕ:'}"
+  ></app-block-info-card>
 
-  <div class="preview">
-    <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
-    <div class="preview_title">
-      <h2 id="situation">НА СИТУАЦИЯ:</h2>
-      <p *ngFor="let text of card.future">{{text}}</p>
-    </div>
-  </div>
+  <app-block-info-card
+    [card] = card
+    [idHtml] ="{value: 'situation'}"
+    [titleContext] = "{value: 'situation'}"
+    [h2Text]="{value: 'НА СИТУАЦИЮ:'}"
+  ></app-block-info-card>
 
-  <div class="preview">
-    <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
-    <div class="preview_title">
-      <h2 id="relations">НА ОТНОШЕНИЯ:</h2>
-      <p *ngFor="let text of card.relations">{{text}}</p>
-    </div>
-  </div>
+  <app-block-info-card
+    [card] = card
+    [idHtml] ="{value: 'relations'}"
+    [titleContext] = "{value: 'relations'}"
+    [h2Text]="{value: 'НА ОТНОШЕНИЯ:'}"
+  ></app-block-info-card>
 
-  <div class="preview">
-    <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
-    <div class="preview_title">
-      <h2 id="think">ЧТО ОН ДУМАЕТ ОБО МНЕ:</h2>
-      <p *ngFor="let text of card.think">{{text}}</p>
-    </div>
-  </div>
+  <app-block-info-card
+    [card] = card
+    [idHtml] ="{value: 'think'}"
+    [titleContext] = "{value: 'think'}"
+    [h2Text]="{value: 'ЧТО ОН(-A) ДУМАЕТ ОБО МНЕ:'}"
+  ></app-block-info-card>
 </main>

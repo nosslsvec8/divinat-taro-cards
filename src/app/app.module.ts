@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AboutCardComponent } from './about-card/about-card.component';
+import { BlockInfoCardComponent } from './block-info-card/block-info-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    AboutCardComponent
+    AboutCardComponent,
+    BlockInfoCardComponent
   ],
   imports: [
     BrowserModule,

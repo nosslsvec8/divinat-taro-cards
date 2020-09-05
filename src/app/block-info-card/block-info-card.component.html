@@ -1,0 +1,7 @@
+<div class="preview" [id]="idHtml.value">
+  <img [src]="'assets/image/'+card.image" [alt]="card.name" [title]="card.name">
+  <div class="preview_title">
+    <h2>{{h2Text.value}}</h2>
+    <p *ngFor="let text of card[titleContext.value]">{{text}}</p>
+  </div>
+</div>
