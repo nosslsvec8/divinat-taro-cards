@@ -68,5 +68,9 @@ main {
       font-size: 20px;
       color: var(--link-color);
     }
+
+    & a:hover{
+      color: var(--main-color);
+    }
   }
 }
