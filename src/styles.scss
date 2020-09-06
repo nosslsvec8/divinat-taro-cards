@@ -1,11 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   --space: 13px 33px;
+  --main-bg: #000;
+  --main-color: red;
+  --link-color: rgb(85, 26, 139);
 }
 
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--main-bg);
+  color: var(--main-color);
+
+  & img {
+    opacity: 0.75;
+  }
 }
 
 main {
@@ -55,6 +64,7 @@ main {
     & a{
       padding-bottom: 15px;
       font-size: 20px;
+      color: var(--link-color);
     }
   }
 }
