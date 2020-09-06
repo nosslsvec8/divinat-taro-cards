@@ -20,6 +20,7 @@ body {
 main {
   padding: var(--space);
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .cards_preview {
@@ -43,6 +44,7 @@ main {
 .preview {
   display: grid;
   grid-template-columns: 25% 70%;
+  padding: 20px 0;
 
   & img{
     max-width: 100%;
