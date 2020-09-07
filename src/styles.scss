@@ -12,6 +12,14 @@ body {
   background-color: var(--main-bg);
   color: var(--main-color);
 
+  & h2 {
+    line-height: 1.2;
+  }
+
+  & h3 {
+    font-size: 22px;
+  }
+
   & img {
     opacity: 0.75;
     transition: .3s opacity ease;
@@ -35,6 +43,11 @@ main {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 15px;
+  margin-bottom: 80px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   & > div {
     display: flex;
@@ -81,5 +94,88 @@ main {
       color: var(--main-color);
       transition: .3s color ease;
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  body img {
+    max-height: 420px;
+    width: auto;
+  }
+
+  .preview .preview_title {
+    padding-left: 20px;
+  }
+
+  body h3 {
+    font-size: 18px;
+  }
+
+  .preview .preview_nav a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body img {
+    max-height: 360px;
+  }
+
+  .preview p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body img {
+    max-height: 320px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .preview {
+    display: flex;
+    padding: 15px 0;
+  }
+
+  .preview img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  :root {
+    --space: 8px 25px;
+  }
+
+  body img {
+    max-height: 240px;
+  }
+
+  body h2 {
+    font-size: 16px;
+  }
+
+  body h3,
+  body p,
+  body a,
+  .preview .preview_nav a{
+    font-size: 14px;
+  }
+
+  main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .cards_preview {
+    margin-bottom: 50px;
   }
 }
