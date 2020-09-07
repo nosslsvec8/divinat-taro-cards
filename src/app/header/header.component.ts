@@ -17,9 +17,9 @@ export class HeaderComponent {
     this.idCard = String(window.location).substr(-2).replace(/\//i, '');
     this.pathname = window.location.pathname;
 
-    if (this.pathname !== '/home') {
-      this.card = this.cards.cards[this.idCard - 1];
-      this.nameCard = this.cards.cards[this.idCard - 1].name;
-    }
+    // if (this.pathname !== '/home') {
+    //   this.card = this.cards.cards[this.idCard - 1];
+    //   this.nameCard = this.cards.cards[this.idCard - 1].name;
+    // }
   }
 }
