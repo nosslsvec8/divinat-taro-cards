@@ -1,15 +1,42 @@
 header {
+  display: flex;
   padding: var(--space);
   background-color: rgba(255,255,255, 0.2);
   font-size: 18px;
   font-weight: bold;
 
-  & a{
-    color: rgba(255,255,255, 0.95);
-    text-decoration: none;
+  & .header_item {
+    padding: 0 1rem;
+
+    & a {
+      text-decoration: none;
+      color: var(--main-color);
+    }
+
+    &:last-child  a{
+      color: white;
+    }
+
+    & a:hover {
+      color: var(--main-color);
+    }
+
+    &::after {
+      content: "→";
+      color: white;
+      padding-left: 2rem;
+    }
+
+    &:last-child::after {
+      content: '';
+    }
   }
 
-  & a:hover{
-     color: var(--main-color);
+  & .header_item:first-child {
+    padding-left: 0;
+  }
+
+  & .header_item:last-child {
+    padding-right: 0;
   }
 }

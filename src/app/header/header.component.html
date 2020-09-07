@@ -1,3 +1,8 @@
 <header>
-  <a href="/home">Вернуться на главную</a>
+  <div class="header_item">
+    <a href="/home">Главная</a>
+  </div>
+  <div class="header_item" *ngIf="nameCard !== ''">
+    <a href="/home">{{nameCard}}</a>
+  </div>
 </header>
