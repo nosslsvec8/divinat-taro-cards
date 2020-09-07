@@ -3,6 +3,6 @@
     <a href="/home">Главная</a>
   </div>
   <div class="header_item" *ngIf="nameCard !== ''">
-    <a href="/home">{{nameCard}}</a>
+    <a [href]="pathname">{{nameCard}}</a>
   </div>
 </header>

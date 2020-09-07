@@ -1,7 +1,7 @@
 header {
   display: flex;
   padding: var(--space);
-  background-color: rgba(255,255,255, 0.2);
+  background-color: rgba(255,255,255, 0.1);
   font-size: 18px;
   font-weight: bold;
 
@@ -10,11 +10,11 @@ header {
 
     & a {
       text-decoration: none;
-      color: var(--main-color);
+      color: white;
     }
 
     &:last-child  a{
-      color: white;
+      color: var(--main-color);
     }
 
     & a:hover {
@@ -23,7 +23,7 @@ header {
 
     &::after {
       content: "→";
-      color: white;
+      //color: white;
       padding-left: 2rem;
     }
 
