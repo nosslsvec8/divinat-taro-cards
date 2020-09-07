@@ -35,7 +35,7 @@ main {
     padding: 10px 15px;
   }
 
-  & .empty{
+  & .empty {
     padding: 0;
     margin: 0;
   }
@@ -46,30 +46,30 @@ main {
   grid-template-columns: 25% 70%;
   padding: 20px 0;
 
-  & img{
+  & img {
     max-width: 100%;
   }
 
-  & p{
+  & p {
     font-size: 18px;
     line-height: 1.4;
   }
 
-  & .preview_title{
+  & .preview_title {
     margin: auto;
   }
 
-  & .preview_nav{
+  & .preview_nav {
     display: flex;
     flex-direction: column;
 
-    & a{
+    & a {
       padding-bottom: 15px;
       font-size: 20px;
       color: var(--link-color);
     }
 
-    & a:hover{
+    & a:hover {
       color: var(--main-color);
     }
   }
