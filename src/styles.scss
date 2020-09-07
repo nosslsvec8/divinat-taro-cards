@@ -3,7 +3,7 @@
   --space: 13px 33px;
   --main-bg: #000;
   --main-color: red;
-  --link-color: rgb(85, 26, 139);
+  --link-color: white;
 }
 
 body {
@@ -67,6 +67,7 @@ main {
       padding-bottom: 15px;
       font-size: 20px;
       color: var(--link-color);
+      text-decoration: none;
     }
 
     & a:hover {

@@ -10,7 +10,7 @@ header {
 
     & a {
       text-decoration: none;
-      color: white;
+      color: var(--link-color);
     }
 
     &:last-child  a{
@@ -23,7 +23,6 @@ header {
 
     &::after {
       content: "→";
-      //color: white;
       padding-left: 2rem;
     }
 
