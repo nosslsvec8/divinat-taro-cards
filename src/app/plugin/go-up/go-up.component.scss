@@ -1,0 +1,46 @@
+.go_UP {
+  right: 10px;
+  opacity: 0.4;
+  height: 40px;
+  position: fixed;
+  top: 85%;
+  width: 40px;
+  display: block;
+  background-color: #089dcb;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 0;
+  border-radius: 2px;
+  transform-origin: 0 0;
+  transform: rotate(45deg);
+  z-index: 10;
+  transition: .3s opacity ease;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    transition: .3s opacity ease;
+  }
+
+  &:hover:before {
+    top: 4px;
+    left: -7px;
+    transition: .8s ease left, .3s ease top;
+  }
+
+  &:before {
+    position: relative;
+    content: "";
+    top: 13px;
+    left: 2px;
+    font-size: 22px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-left: 5px solid var(--main-bg);
+    border-top: 5px solid var(--main-bg);
+    transition: .8s ease left, .3s ease top;
+  }
+}
