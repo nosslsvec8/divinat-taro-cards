@@ -6,14 +6,31 @@
   --link-color: white;
 }
 
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/opensans.woff") format("woff"),
+    url("/assets/fonts/opensans.woff2") format("woff2"),
+    url("/assets/fonts/opensans.ttf") format("ttf");
+  font-weight:400;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/opensansbold.woff") format("woff"),
+  url("/assets/fonts/opensansbold.woff2") format("woff2"),
+  url("/assets/fonts/opensansbold.ttf") format("ttf");
+  font-weight:600;
+}
+
+
 body {
   margin: 0;
   padding: 0;
   background-color: var(--main-bg);
   color: var(--main-color);
+  font-family: "Open Sans";
 
   & h2 {
-    line-height: 1.2;
+    line-height: 1.25;
   }
 
   & h3 {
@@ -71,7 +88,7 @@ main {
 
   & p {
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
   & .preview_title {
