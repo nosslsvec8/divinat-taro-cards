@@ -2,7 +2,7 @@
   <div class="header_item">
     <a href="/home">Главная</a>
   </div>
-<!--  <div class="header_item" *ngIf="nameCard !== ''">-->
-<!--    <a [href]="pathname">{{nameCard}}</a>-->
-<!--  </div>-->
+  <div class="header_item" *ngIf="pathname != '/home'">
+    <a [href]="pathname">{{title.getTitle()}}</a>
+  </div>
 </header>

@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {Cards} from 'src/app/Cards';
+import {UrlService} from '../service/url.service';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-header',
@@ -8,18 +10,8 @@ import {Cards} from 'src/app/Cards';
 })
 export class HeaderComponent {
   cards = new Cards();
-  card;
-  idCard;
-  nameCard = '';
-  pathname;
+  url = new UrlService();
+  pathname = this.url.getLocalUrl();
 
-  constructor() {
-    this.idCard = String(window.location).substr(-2).replace(/\//i, '');
-    this.pathname = window.location.pathname;
-
-    // if (this.pathname !== '/home') {
-    //   this.card = this.cards.cards[this.idCard - 1];
-    //   this.nameCard = this.cards.cards[this.idCard - 1].name;
-    // }
-  }
+  constructor(public title: Title) {}
 }
