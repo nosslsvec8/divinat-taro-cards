@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Cards} from 'src/app/Cards';
 import {Title} from '@angular/platform-browser';
+import {UrlService} from '../service/url.service';
 
 @Component({
   selector: 'app-about-card',
@@ -9,14 +10,13 @@ import {Title} from '@angular/platform-browser';
 })
 export class AboutCardComponent implements OnInit {
   cards = new Cards();
+  url = new UrlService();
+  idCard = this.url.getIdCard();
+  pathname = this.url.getLocalUrl();
   card;
-  idCard;
   nameCard;
-  pathname;
 
   constructor(private title: Title) {
-    this.idCard = String(window.location).substr(-2).replace(/\//i, '');
-    this.pathname = window.location.pathname;
     this.card = this.cards.cards[this.idCard - 1];
     this.nameCard = this.cards.cards[this.idCard - 1].name;
   }
