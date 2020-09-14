@@ -1,7 +1,7 @@
-# DivinatTarotCards
+# Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
-## Development server
+## View
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Link to the result [here](https://taro-cards.web.app/).
