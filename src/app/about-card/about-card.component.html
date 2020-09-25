@@ -7,14 +7,23 @@
       <br>
       <h3>Навигация:</h3>
       <div class="preview_nav">
+        <a [href]="pathname + '#totalValue'" *ngIf="card.totalValue != '' && card.totalValue">ОБЩЕЕ ЗНАЧЕНИЕ</a>
         <a [href]="pathname + '#yes_no'" *ngIf="card.yesNo != '' && card.yesNo">ДА - НЕТ</a>
-        <a [href]="pathname + '#future'">НА БУДУЩЕЕ</a>
-        <a [href]="pathname + '#situation'">НА СИТУАЦИЮ</a>
-        <a [href]="pathname + '#relations'">НА ОТНОШЕНИЯ</a>
-        <a [href]="pathname + '#think'">ЧТО ОН(-А) ДУМАЕТ ОБО МНЕ</a>
+        <a [href]="pathname + '#future'" *ngIf="card.future != '' && card.future">НА БУДУЩЕЕ</a>
+        <a [href]="pathname + '#situation'" *ngIf="card.situation != '' && card.situation">НА СИТУАЦИЮ</a>
+        <a [href]="pathname + '#relations'" *ngIf="card.relations != '' && card.relations">НА ОТНОШЕНИЯ</a>
+        <a [href]="pathname + '#think'" *ngIf="card.think != '' && card.think">ЧТО ОН(-А) ДУМАЕТ ОБО МНЕ</a>
       </div>
     </div>
   </div>
+
+  <app-block-info-card
+    *ngIf="card.totalValue != '' && card.totalValue"
+    [card] = card
+    [idHtml] ="{value: 'totalValue'}"
+    [titleContext] = "{value: 'totalValue'}"
+    [h2Text]="{value: 'ОБЩЕЕ ЗНАЧЕНИЕ:'}"
+  ></app-block-info-card>
 
   <app-block-info-card
     *ngIf="card.yesNo != '' && card.yesNo"
@@ -25,6 +34,7 @@
   ></app-block-info-card>
 
   <app-block-info-card
+    *ngIf="card.future != '' && card.future"
     [card] = card
     [idHtml] ="{value: 'future'}"
     [titleContext] = "{value: 'future'}"
@@ -32,6 +42,7 @@
   ></app-block-info-card>
 
   <app-block-info-card
+    *ngIf="card.situation != '' && card.situation"
     [card] = card
     [idHtml] ="{value: 'situation'}"
     [titleContext] = "{value: 'situation'}"
@@ -39,6 +50,7 @@
   ></app-block-info-card>
 
   <app-block-info-card
+    *ngIf="card.relations != '' && card.relations"
     [card] = card
     [idHtml] ="{value: 'relations'}"
     [titleContext] = "{value: 'relations'}"
@@ -46,6 +58,7 @@
   ></app-block-info-card>
 
   <app-block-info-card
+    *ngIf="card.think != '' && card.think"
     [card] = card
     [idHtml] ="{value: 'think'}"
     [titleContext] = "{value: 'think'}"
