@@ -17,6 +17,7 @@
   </div>
 
   <app-block-info-card
+    *ngIf="card.yesNo != '' && card.yesNo"
     [card] = card
     [idHtml] ="{value: 'yes_no'}"
     [titleContext] = "{value: 'yesNo'}"
